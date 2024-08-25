@@ -5,6 +5,7 @@ class IntroAnimation:
     def __init__(self, master, project_name):
         self.master = master
         self.master.overrideredirect(True)  # This removes the title bar
+        self.master.attributes("-topmost", True)  # Makes the window stay on top
         self.window_width = 400
         self.window_height = 200
         self.border_size = 1  # Size of the border
@@ -58,4 +59,3 @@ def show_intro(project_name):
 if __name__ == "__main__":
     # Example project name passed as argument
     show_intro("Project Name Here")
-
